@@ -1,0 +1,20 @@
+{
+  "persons": [
+    {
+      "id": "1",
+      "firstName": "Berkan",
+      "lastName": "Kütük"
+    },
+    {
+      "id": "2",
+      "firstName": "John",
+      "lastName": "Doe"
+    }
+  ],
+  "things": [
+    {
+      "chair": 20,
+      "table": 50
+    }
+  ]
+}
