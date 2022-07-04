@@ -1,0 +1,74 @@
+#app {
+    width: 1000px;
+    height: 100vh;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.app-inner {
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+    padding: 20px;
+}
+
+.box {
+    background-color: #2d2d2d;
+    padding: 10px;
+    border-radius: 2rem;
+    margin: 10px;
+}
+
+.box:hover {
+    background-color: #494949;
+    scale: 1.05;
+}
+
+h5 {
+    color: white;
+}
+
+button.btn {
+    margin: 0 5px;
+}
+
+html, body {
+    height: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    margin: 0;
+    background: linear-gradient(45deg, #49a09d, #5f2c82);
+    font-family: sans-serif;
+    font-weight: 100;
+}
+
+label {
+    font-weight: bold;
+    color: white;
+    text-align: left !important;
+
+}
+
+.set {
+    margin: 10px;
+}
+
+input:hover {
+    transform: scale(0.98);
+}
+
+input:active {
+    transform: scale(1.05);
+}
+
+button:hover {
+    transform: scale(0.98);
+}
+
+button:active {
+    transform: scale(1.05);
+}
