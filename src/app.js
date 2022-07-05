@@ -4,6 +4,7 @@ const app = Vue.createApp({
             id: '',
             firstName: '',
             lastName: '',
+            userID: '',
             users:  []
         }
 
@@ -17,6 +18,8 @@ const app = Vue.createApp({
         async fetchUser(id) {
             const res = await fetch(`http://localhost:5000/persons/${id}`)
             this.users = await res.json()
+            this.userID = ''
+
         },
 
         async addUser(e){
@@ -38,6 +41,9 @@ const app = Vue.createApp({
             const data = await res.json()
 
             this.users = [...this.users, data]
+
+            this.firstName = ''
+            this.lastName = ''
         },
         async deleteUser(id){
             if (confirm('Are you sure?')) {
@@ -48,6 +54,10 @@ const app = Vue.createApp({
                 res.status === 200
                     ? (this.users = this.users.filter((user) => user.id !== id))
                     : alert('Error deleting task')
+
+                this.userID = ''
+
+                await this.fetchUsers()
             }
         },
     },
