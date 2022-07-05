@@ -8,6 +8,8 @@
     padding: 10px;
     border-radius: 2rem;
     margin: 10px;
+    width: 60%;
+    box-shadow: 0 3px 10px rgba(176, 128, 234, 0.91);
 }
 
 .box:hover {
