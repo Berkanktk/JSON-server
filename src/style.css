@@ -15,8 +15,9 @@
     scale: 1.05;
 }
 
-h5 {
+h3, h5 {
     color: white;
+    font-weight: bold !important;
 }
 
 button.btn {
