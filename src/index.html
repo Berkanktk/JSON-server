@@ -5,7 +5,7 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Project</title>
+        <title>JSON Server</title>
 
         <!-- js and stylesheet files -->
         <link rel="stylesheet" href="style.css">
@@ -67,20 +67,19 @@
                     <div v-if="users.length > 0"  v-for="user in users" :key="user.id">
                         <div class="box">
                             <h5>ID: {{ user.id }}</h5>
-                            <h5>Name: {{ user.firstName }}</h5>
+                            <h5>Name: {{ user.firstName }} {{ user.lastName }} </h5>
                         </div>
                     </div>
 
                     <div>
                         <div v-if="users.id != null" class="box">
                             <h5>ID: {{ users.id }}</h5>
-                            <h5>Name: {{ users.firstName }}</h5>
+                            <h5>Name: {{ users.firstName }} {{ users.lastName }}</h5>
                         </div>
                     </div>
                 </div>
 
             </div>
-
         </div>
     </body>
 </html>
