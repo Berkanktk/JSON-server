@@ -24,51 +24,60 @@
     <body>
         <div id="app">
 
-            <div class="app-inner">
+            <div class="d-flex bd-highlight">
 
-                <div v-if="users.length > 0"  v-for="user in users" :key="user.id">
-                    <div class="box">
-                        <h5>ID: {{ user.id }}</h5>
-                        <h5>Name: {{ user.firstName }}</h5>
+                <div class="div1">
+                    <div class="menu">
+
+                        <div class="set">
+                            <button class="btn btn-dark" v-on:click="fetchUsers()">Fetch Users</button>
+                        </div>
+
+                        <div>
+                            <form @submit="addUser">
+                                <div class="mb-3">
+                                    <label class="form-label">Firstname</label>
+                                    <input class="form-control" type="text" v-model="firstName" name="text" placeholder="John" required/>
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label">Lastname</label>
+                                    <input class="form-control" type="text" v-model="lastName" name="text" placeholder="Doe" required/>
+                                </div>
+
+                                <input type="submit" value="Add User" class="btn btn-primary" />
+                            </form>
+                        </div>
+
+                        <div class="set">
+                            <label class="form-label">User ID</label>
+                            <input class="form-control" type="text" placeholder="12" v-model="userID">
+                        </div>
+
+                        <div class="set">
+                            <button class="btn btn-success" v-on:click="fetchUser(userID)">Fetch User</button>
+                            <button class="btn btn-danger" v-on:click="deleteUser(userID)">Delete User</button>
+                        </div>
                     </div>
                 </div>
 
-                <div>
-                    <div v-if="users.id != null" class="box">
-                        <h5>ID: {{ users.id }}</h5>
-                        <h5>Name: {{ users.firstName }}</h5>
+                <div class="div2">
+                    <div v-if="users.length > 0"  v-for="user in users" :key="user.id">
+                        <div class="box">
+                            <h5>ID: {{ user.id }}</h5>
+                            <h5>Name: {{ user.firstName }}</h5>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div v-if="users.id != null" class="box">
+                            <h5>ID: {{ users.id }}</h5>
+                            <h5>Name: {{ users.firstName }}</h5>
+                        </div>
                     </div>
                 </div>
 
-                <div class="set">
-                    <button class="btn btn-dark" v-on:click="fetchUsers()">Fetch Users</button>
-                </div>
-
-                <div>
-                    <form @submit="addUser">
-                        <div class="mb-3">
-                            <label class="form-label">Firstname</label>
-                            <input class="form-control" type="text" v-model="firstName" name="text" placeholder="John" required/>
-                        </div>
-                        <div class="mb-3">
-                            <label class="form-label">Lastname</label>
-                            <input class="form-control" type="text" v-model="lastName" name="text" placeholder="Doe" required/>
-                        </div>
-
-                        <input type="submit" value="Add User" class="btn btn-primary" />
-                    </form>
-                </div>
-
-                <div class="set">
-                    <label class="form-label">User ID</label>
-                    <input class="form-control" type="text" placeholder="12" v-model="userID">
-                </div>
-
-                <div class="set">
-                    <button class="btn btn-success" v-on:click="fetchUser(userID)">Fetch User</button>
-                    <button class="btn btn-danger" v-on:click="deleteUser(userID)">Delete User</button>
-                </div>
             </div>
+
         </div>
     </body>
 </html>

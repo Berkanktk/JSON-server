@@ -1,15 +1,4 @@
-#app {
-    width: 1000px;
-    height: 100vh;
-    margin: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
-
-.app-inner {
+.menu {
     box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
     padding: 20px;
 }
@@ -50,7 +39,6 @@ label {
     font-weight: bold;
     color: white;
     text-align: left !important;
-
 }
 
 .set {
@@ -71,4 +59,30 @@ button:hover {
 
 button:active {
     transform: scale(1.05);
+}
+
+div.box {
+    width: 400px;
+}
+
+.div1 {
+    width: 1000px;
+    height: 100vh;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.div2 {
+    overflow: auto;
+    max-height: 100vh;
+
+    width: 1000px;
+    margin: auto;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
