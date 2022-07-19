@@ -7,7 +7,6 @@ Install json-server globally
 ````
 
 Start the json-server
-Install json-server
 ````bash
 > json-server --watch db.json --port 5000
 ````
@@ -16,3 +15,6 @@ Run with
 ```bash
 > npx serve
 ```
+
+Navigate to JSON data ex.  
+`localhost:5000/persons`
